@@ -2,44 +2,6 @@ import Image from "next/image";
 import Timeline from "@/components/Timeline";
 import "./globals.css";
 
-const timelineData = [
-  {
-    year: "2024",
-    title: "Learnt working with AI",
-    subtitle: "Recently got on the AI hype train",
-    color: "border-pink-500",
-    align: "right"
-  },
-  {
-    year: "2023",
-    title: "Learnt Editing & UI/UX Design",
-    subtitle: "Focused more on creative parts like UI/UX design and VFX",
-    color: "border-cyan-400",
-    align: "left"
-  },
-  {
-    year: "2022",
-    title: "Learnt Programming Languages",
-    subtitle: "Started learning C++ and React",
-    color: "border-pink-500",
-    align: "right"
-  },
-  {
-    year: "2021",
-    title: "Learnt Scripting Languages",
-    subtitle: "Had my first experience with JavaScript and Python",
-    color: "border-cyan-400",
-    align: "left"
-  },
-  {
-    year: "2019 & 2020",
-    title: "Learnt Visual Basic & Scratch",
-    subtitle: "",
-    color: "border-cyan-400",
-    align: "right"
-  }
-];
-
 export default function Home() {
   return (
     <>
