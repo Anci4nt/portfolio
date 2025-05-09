@@ -69,7 +69,7 @@ export default function Home() {
                   development for 3.5 years.
                   <br />
                   Welcome to my portfolio!! Here you will find everything about me
-                  and what I've done in my professional life.
+                  and what I have done in my professional life.
                 </p>
               </div>
             </div>
