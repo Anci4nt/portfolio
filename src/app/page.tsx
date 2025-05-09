@@ -65,7 +65,7 @@ export default function Home() {
               <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
                 <p className="leading-relaxed text-lg mb-4">
                   A 14 year old doing competitive programming and frontend web
-                  development. I've been doing coding for the past 4 years and web
+                  development. I have been doing coding for the past 4 years and web
                   development for 3.5 years.
                   <br />
                   Welcome to my portfolio!! Here you will find everything about me
