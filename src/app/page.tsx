@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Projects from "@/components/Projects";
 import Timeline from "@/components/Timeline";
 import "./globals.css";
 
@@ -137,6 +138,9 @@ export default function Home() {
       </section>
 
       <Timeline />
+
+            <Projects />
+
     </>
   );
 }
