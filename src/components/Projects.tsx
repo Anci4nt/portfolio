@@ -20,10 +20,16 @@ const projects = [
     link: "https://github.com/Anci4nt/fitpulse",
   },
     {
-    title: "FitPulse",
-    description: "Secured 3rd Position in Hackathon by ShisTech'24",
-    image: "/images/project3.png",
-    link: "https://github.com/Anci4nt/fitpulse",
+    title: "Cyber Fair'25",
+    description: "Waiting for the result. Gave My Best.",
+    image: "/images/project4.png",
+    link: "https://github.com/Anci4nt/aiscyberfair25",
+  },
+      {
+    title: "Brainrot Translator",
+    description: "A pretty fun hackathon happened at Microsoft Office , Delhi",
+    image: "/images/project5.png",
+    link: "https://github.com/Anci4nt/brainrot-translator",
   },
 ];
 

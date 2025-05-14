@@ -1,11 +1,15 @@
+'use client';
+
 import Image from "next/image";
 import Projects from "@/components/Projects";
 import Timeline from "@/components/Timeline";
+import { motion } from "framer-motion";
 import "./globals.css";
 
 export default function Home() {
   return (
     <>
+      {/* Navbar */}
       <nav className="bg-white flex items-center justify-between text-black max-h-20 py-5 max-w-6xl fixed top-[25px] left-1/2 transform -translate-x-1/2 w-[90%] px-[30px] rounded-[30px] shadow-lg z-[1000]">
         <Image
           src="/images/andrew.jpg"
@@ -16,20 +20,20 @@ export default function Home() {
         />
 
         <ul className="flex space-x-5">
-          {["/home", "/skills", "/journey", "/projects"].map((item, index) => (
+          {["home", "skills", "journey", "projects"].map((item, index) => (
             <li
               key={item}
-              className="hover:text-green-500 relative group transition-all duration-200 ease-in-out animate-fade-in"
+              className="hover:text-green-500 relative group transition-all duration-200 ease-in-out"
               style={{
                 animation: "fadeIn 0.3s ease-in-out forwards",
                 animationDelay: `${index * 100}ms`,
               }}
             >
               <a
-                href={item}
+                href={`#${item}`}
                 className="transition-transform duration-200 group-hover:scale-105 capitalize"
               >
-                {item.replace("/", "")}
+                {item}
                 <span className="block h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
               </a>
             </li>
@@ -37,7 +41,15 @@ export default function Home() {
         </ul>
       </nav>
 
-      <section className="text-gray-600 body-font pt-48">
+      {/* Home Section */}
+      <motion.section
+        id="home"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="text-gray-600 body-font pt-48"
+      >
         <div className="container px-5 py-24 mx-auto flex flex-col">
           <div className="lg:w-4/6 mx-auto">
             <div className="flex flex-col sm:flex-row mt-10">
@@ -76,9 +88,17 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <section className="py-20 bg-gray-50 text-gray-900">
+      {/* Skills Section */}
+      <motion.section
+        id="skills"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="py-20 bg-gray-50 text-gray-900"
+      >
         <div className="max-w-6xl mx-auto px-5 text-center">
           <h2 className="text-3xl font-bold mb-10">/skills</h2>
 
@@ -97,9 +117,7 @@ export default function Home() {
 
             {/* Frameworks */}
             <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-xs hover:scale-105 transform transition duration-300">
-              <h3 className="text-xl font-semibold mb-4">
-                Frameworks & Libraries
-              </h3>
+              <h3 className="text-xl font-semibold mb-4">Frameworks & Libraries</h3>
               <ul className="list-disc pl-5 space-y-1 text-left">
                 <li>React.js</li>
                 <li>Next.js</li>
@@ -135,12 +153,31 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <Timeline />
+      {/* Journey Section */}
+      <motion.section
+        id="journey"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="py-20"
+      >
+        <Timeline />
+      </motion.section>
 
-            <Projects />
-
+      {/* Projects Section */}
+      <motion.section
+        id="projects"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="py-20"
+      >
+        <Projects />
+      </motion.section>
     </>
   );
 }
