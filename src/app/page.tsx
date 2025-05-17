@@ -5,6 +5,7 @@ import Projects from "@/components/Projects";
 import Timeline from "@/components/Timeline";
 import { motion } from "framer-motion";
 import "./globals.css";
+import { FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -177,7 +178,30 @@ export default function Home() {
         className="py-20"
       >
         <Projects />
+
+        <footer className="bg-white border-t border-gray-200 mt-10 py-10 px-6 text-center text-gray-700">
+  <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+    <p className="text-sm">&copy; {new Date().getFullYear()} Anci4nttt. All rights reserved.</p>
+
+
+<div className="flex space-x-4 text-gray-500 text-xl">
+  <a href="https://github.com/Anci4nt" target="_blank" className="hover:text-black">
+    <FaGithub />
+  </a>
+  <a href="https://instagram.com/alokik.ae" target="_blank" className="hover:text-blue-600">
+    <FaInstagram />
+  </a>
+  <a href="mailto:rvalokik@gmail.com" className="hover:text-red-500">
+    <FaEnvelope />
+  </a>
+</div>
+
+  </div>
+</footer>
+
       </motion.section>
     </>
+
+    
   );
 }

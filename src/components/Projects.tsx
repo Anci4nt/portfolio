@@ -31,6 +31,12 @@ const projects = [
     image: "/images/project5.png",
     link: "https://github.com/Anci4nt/brainrot-translator",
   },
+        {
+    title: "Portfolio",
+    description: "This is the Site you're viewing right now.",
+    image: "/images/project6.png",
+    link: "https://github.com/Anci4nt/portfolio",
+  },
 ];
 
 export default function Projects() {
