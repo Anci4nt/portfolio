@@ -5,9 +5,9 @@ const prisma = new PrismaClient();
 
 export async function DELETE(
   req: NextRequest,
-  context: { params: Record<string, string> } 
+  { params }: { params: { id: string } } 
 ) {
-  const id = parseInt(context.params.id);
+  const id = Number(params.id);
   if (isNaN(id)) {
     return new NextResponse('Invalid ID', { status: 400 });
   }
