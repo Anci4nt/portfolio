@@ -13,7 +13,7 @@ export async function DELETE(
   try {
     await prisma.project.delete({ where: { id } });
     return new NextResponse(null, { status: 204 }); 
-  } catch (error) {
+  } catch (_error) {
     return new NextResponse('Project not found', { status: 404 });
   }
 }
