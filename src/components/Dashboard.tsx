@@ -70,7 +70,7 @@ export default function Dashboard() {
             type="text"
             name={field}
             placeholder={field}
-            value={(form as any)[field]}
+            value={form[field as keyof typeof form]}
             onChange={handleChange}
             className="w-full p-2 border rounded"
           />
