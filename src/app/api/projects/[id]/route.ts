@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 export async function DELETE(
   req: NextRequest,
-  context: { params: { id: string } }
+  context: { params: Record<string, string> } 
 ) {
   const id = parseInt(context.params.id);
   if (isNaN(id)) {
